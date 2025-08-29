@@ -16,7 +16,6 @@ export const createTask = createAsyncThunk(
             return await taskService.createTask(taskData, token)
         } catch (error){
             const message = (error.response && error.response && error.response.data.message) || error.message || error.toString();
-            console.log('so far so good');
             return thunkAPI.rejectWithValue(message);
         }
     }
