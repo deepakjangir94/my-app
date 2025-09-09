@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'http://localhost:8000', // point to your backend
+      '/api': 'http://ec2-13-233-97-72.ap-south-1.compute.amazonaws.com:8000', // point to your backend
     },
   },
 })
